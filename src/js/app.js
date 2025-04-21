@@ -9,11 +9,11 @@
  * @param {Object} - {name: 'Маг', health: 90}
  */
 
-export function healthStatus({ _, health}) {
-  if (health > 50) {
+export function healthStatus(character) {
+  if (character.health > 50) {
     return "healthy";
   }
-  if (health >= 15) {
+  if (character.health >= 15) {
     return "wounded";
   }
   return "critical";
