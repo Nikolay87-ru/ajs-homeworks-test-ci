@@ -1,4 +1,4 @@
-import { healthStatus } from "./app.js";
+import { healthStatus } from "../app.js";
 
 describe("healthStatus", () => {
   test.each([
