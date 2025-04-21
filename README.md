@@ -1,2 +1,21 @@
 # ajs-homeworks-test-ci
+
+Домашнее задание к занятию "Модули".
+
+***
+
+#### В проекте установлено:
+
++ npm
++ Babel
++ Core js
+
+**Задание №1**
+
+Написана функция проверки статуса здоровья для персонажа игры (в модуле app.js).
+Написан тест для проверки статус здоровья игрового персонажа (в модуле app.test.js).
+
+***
+
+###### Статус прокрытия кода тестами:
 [![Build status](https://ci.appveyor.com/api/projects/status/mlkf7fonkcnb3egi?svg=true)](https://ci.appveyor.com/project/Nikolay87-ru/ajs-homeworks-test-ci)
