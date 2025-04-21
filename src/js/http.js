@@ -1,7 +1,7 @@
-export default function sum(items) {
-  let result = 0;
-  for (const item of items) {
-    result += item;
-  }
-  return result;
+export function httpGet(url) {
+  throw new Error(url);
+}
+
+export function httpPost(url) {
+  throw new Error(url);
 }
