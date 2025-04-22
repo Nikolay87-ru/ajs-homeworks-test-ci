@@ -1,5 +1,5 @@
 import { healthStatus, sortingListOfHeroes, getLevel } from "../app.js";
-import fetchData from '../http.js';
+import fetchData from "../http.js";
 
 jest.mock("../http");
 
@@ -46,7 +46,7 @@ describe("getLevel", () => {
   test("should return level when status is ok", () => {
     fetchData.mockReturnValue({
       status: "ok",
-      level: 1
+      level: 1,
     });
 
     const result = getLevel(1);
@@ -57,7 +57,7 @@ describe("getLevel", () => {
   test("should return message when status is not ok", () => {
     fetchData.mockReturnValueOnce({
       status: "error",
-      level: 0
+      level: 2,
     });
 
     const result = getLevel(2);
