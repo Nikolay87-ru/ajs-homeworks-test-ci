@@ -1,4 +1,7 @@
-import { healthStatus, sortingListOfHeroes } from "../app.js";
+import { healthStatus, sortingListOfHeroes, getLevel } from "../app.js";
+import fetchData from '../http.js';
+
+jest.mock("../http");
 
 describe("healthStatus", () => {
   test.each([
@@ -33,4 +36,11 @@ describe("sortingListOfHeroes", () => {
 
     expect(result).toEqual(expectedList);
   });
+});
+
+describe("getLevel", () => {
+  beforeEach(() => {
+    fetchData.mockClear();
+  });
+  
 });
