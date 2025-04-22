@@ -1,13 +1,4 @@
 // TODO: write your code here
-// import sum from "./basic";
-
-// console.log("worked");
-
-// console.log(sum([1, 2]));
-
-/**
- * @param {Object} - {name: 'Маг', health: 90}
- */
 
 export function healthStatus(character) {
   if (character.health > 50) {
@@ -17,4 +8,8 @@ export function healthStatus(character) {
     return "wounded";
   }
   return "critical";
+}
+
+export function sortingListOfHeroes(heroes) {
+  return heroes.sort((x, y) => x.health - y.health).reverse();
 }
