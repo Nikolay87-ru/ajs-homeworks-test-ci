@@ -42,5 +42,16 @@ describe("getLevel", () => {
   beforeEach(() => {
     fetchData.mockClear();
   });
-  
+
+  test("should return level when status is ok", () => {
+    fetchData.mockReturnValue({
+      status: "ok",
+      level: 1
+    });
+
+    const result = getLevel(1);
+    expect(result).toBe("Ваш текущий уровень: 1");
+    expect(fetchData).toHaveBeenCalledWith("https://server/user/1");
+  });
+
 });
