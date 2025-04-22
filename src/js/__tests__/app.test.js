@@ -1,4 +1,4 @@
-import { healthStatus } from "../app.js";
+import { healthStatus, sortingListOfHeroes } from "../app.js";
 
 describe("healthStatus", () => {
   test.each([
@@ -12,5 +12,25 @@ describe("healthStatus", () => {
     [{ name: "Рыцарь", health: 0 }, "critical"],
   ])("character %p should return %s", (character, expectedStatus) => {
     expect(healthStatus(character)).toBe(expectedStatus);
+  });
+});
+
+describe("sortingListOfHeroes", () => {
+  test("should sorting list of heroes by health", () => {
+    const heroes = [
+      { name: "мечник", health: 10 },
+      { name: "маг", health: 100 },
+      { name: "лучник", health: 80 },
+    ];
+
+    const expectedList = [
+      { name: "маг", health: 100 },
+      { name: "лучник", health: 80 },
+      { name: "мечник", health: 10 },
+    ];
+
+    const result = sortingListOfHeroes(heroes);
+
+    expect(result).toEqual(expectedList);
   });
 });
