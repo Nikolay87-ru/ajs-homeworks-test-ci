@@ -54,4 +54,13 @@ describe("getLevel", () => {
     expect(fetchData).toHaveBeenCalledWith("https://server/user/1");
   });
 
+  test("should return message when status is not ok", () => {
+    fetchData.mockReturnValueOnce({
+      status: "error",
+      level: 0
+    });
+
+    const result = getLevel(2);
+    expect(result).toBe("Информация об уровне временно недоступна");
+  });
 });
